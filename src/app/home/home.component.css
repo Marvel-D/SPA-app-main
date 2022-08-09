@@ -1,0 +1,24 @@
+.home_page1 {
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/home/background-home-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+.hp_bottom {
+  /* border: 1px solid white; */
+  padding-bottom: 10%;
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  align-items: flex-end;
+}
+.explore_btn {
+  background-color: white;
+  border-radius: 50%;
+  padding: 80px 80px;
+  width: fit-content;
+  color: black;
+}
