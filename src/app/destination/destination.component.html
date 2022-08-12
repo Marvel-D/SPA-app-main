@@ -1,16 +1,61 @@
+<app-navbar></app-navbar>
+
 <div class="planet_page1">
     <div class="translate-y-32">
-        <div>
-            <p>So, you want to travel to <button mat-button color="accent">Accent</button></p>
-            <span class="">Space</span>
-            <p>
-                Let’s face it; if you want to go to space, you might as well genuinely go to
-                outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a
-                truly
-                out of this world experience! Explore
-            </p>
 
-
+        <div class="flex">
+            <p>01</p>
+            <span>pick your destination</span>
         </div>
+
+        <div class="planets">
+            <div *ngFor="let eachPlanet of explorationData.destinations" (click)="onSelectPlanet(eachPlanet)">
+                <button class="mr-5">{{eachPlanet.name}}</button>
+            </div>
+        </div>
+
+        <div class="clickedPlanet" *ngIf="selectedPlanet">
+            <div>
+                <img src="{{selectedPlanet.images.png}}" alt="{{selectedPlanet.name}}" height="40%" width="60%">
+            </div>
+
+            <div class="planetDetails">
+                <h1>{{selectedPlanet.name}}</h1>
+                <p>{{selectedPlanet. description}}</p>
+
+                <br>
+                <hr>
+                <div class="flex">
+                    <div>
+                        <p>AVG. DISTANCE</p>
+                        <h1>{{selectedPlanet.distance}}</h1>
+                    </div>
+                    <div>
+                        <p>EST. TRAVEL TIME</p>
+                        <h1>{{selectedPlanet.travel}}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div>
+            <div class="planetDetails" *ngFor="let eachPlanet of explorationData.destinations"
+                (click)="onSelectPlanet(eachPlanet)">
+                <li class="mr-6">{{eachPlanet.name}}</li>
+            </div>
+        </div>
+
+
+
+        <div class="planets">
+            <div class="planetsImg" *ngIf="selectedPlanet">
+                <img src='{{selectedPlanet.images.png}}' alt="{{selectedPlanet.name}}">
+            </div>
+
+            <div *ngIf="selectedPlanet">
+                <button>{{selectedPlanet.name}}</button>
+            </div>
+        </div> -->
     </div>
+
 </div>

@@ -1,5 +1,37 @@
 .planet_page1 {
   height: 100%;
   width: 100%;
-  background-color: slateblue;
+  background-image: url("/assets/images/destination/background-destination-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+
+.blu {
+  background-color: blue;
+}
+
+.planets {
+  border: 2px solid red;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.planets li {
+  list-style: none;
+}
+
+.clickedPlanet {
+  /* padding: 0 10%; */
+  border: 2px solid darkorange;
+  display: flex;
+  justify-content: space-around;
+}
+
+.planetDetails {
+  border: 1px solid royalblue;
+  display: flex;
+  width: 50%;
+  flex-direction: column;
 }

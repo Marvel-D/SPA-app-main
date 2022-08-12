@@ -1,0 +1,35 @@
+.login-page {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(10, 26, 37);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page-card {
+  height: 95%;
+  width: 95%;
+  background: linear-gradient(
+      to right,
+      rgba(1, 1, 1, 0.854) 50%,
+      rgba(1, 1, 1, 0)
+    ),
+    url("/assets/images/login-bg-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.card-left {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 3%;
+}

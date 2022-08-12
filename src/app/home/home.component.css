@@ -1,24 +1,45 @@
 .home_page1 {
   height: 100%;
   width: 100%;
-  background-image: url("../images/home/background-home-desktop.jpg");
+  background-image: url("/assets/images/home/background-home-desktop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   color: white;
 }
-.hp_bottom {
-  /* border: 1px solid white; */
-  padding-bottom: 10%;
+
+.hp_top {
   display: flex;
-  justify-content: space-around;
-  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.hp_bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18%;
+  padding: 0 8%;
+}
+
+.home_details {
+  display: block;
+  width: 50%;
+}
+.login_signin {
+  width: 50%;
+  display: flex;
   align-items: flex-end;
+  justify-content: center;
 }
 .explore_btn {
   background-color: white;
-  border-radius: 50%;
-  padding: 80px 80px;
+  padding: 40px;
+  border-radius: 20px;
   width: fit-content;
   color: black;
+}
+
+.choose {
+  display: flex;
+  justify-content: space-around;
 }

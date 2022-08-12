@@ -1,8 +1,13 @@
 <div class="home_page1">
+    <div class="hp_top">
+        <i class="pi pi-prime"></i>
+    </div>
+
     <div class="hp_bottom">
-        <div class="w-1/4">
+        <div class="home_details">
             <p class="">So, you want to travel to</p>
             <h1 class="text-8xl my-5">Space</h1>
+
             <p>
                 Let's face it; if you want to go to space, you might as well genuinely go to
                 outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a
@@ -11,8 +16,20 @@
             </p>
         </div>
 
-        <div class="explore_btn">
-            explore
+        <div class="login_signin">
+            <div>
+                <button class="explore_btn" (click)="showModalQuestion()" icon="pi pi-external-link">
+                    login/sign-in
+                </button>
+                <p-dialog header="Do you have a ticket?" [(visible)]="modalQuestion" [modal]="true"
+                    [style]="{width: '50vw'}" [draggable]="false" [resizable]="false">
+                    <div class="choose">
+                        <p-button (click)="goToLogin()" icon="pi pi-external-link" label="Yes"></p-button>
+                        <p-button (click)="goToSignUp()" icon="pi pi-external-link" label="No"></p-button>
+                    </div>
+                </p-dialog>
+            </div>
         </div>
     </div>
+
 </div>

@@ -1,35 +1,6 @@
 .main {
   height: 100%;
 }
-nav {
-  position: absolute;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 50px;
-  margin-top: 40px;
-  width: 100%;
-  padding: 0 20px;
-}
-.nav-right {
-  display: flex;
-}
-
-.nav-right li {
-  cursor: pointer;
-  border: 1px solid red;
-  margin-right: 20px;
-}
-.nav-right li:hover {
-  color: brown;
-  display: flex;
-  align-items: center;
-}
-
-.nav-right li span {
-  margin-right: 10px;
-}
 
 .body {
   width: 100%;

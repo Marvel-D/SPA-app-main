@@ -1,0 +1,35 @@
+.nav {
+  position: absolute;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  height: 50px;
+  width: 100%;
+  padding: 0 20px;
+}
+.nav-container {
+  @apply h-full w-1/2 flex items-center;
+  @apply rounded;
+  background-color: rgba(116, 120, 120, 0.498);
+}
+
+.nav-right {
+  display: flex;
+}
+
+.nav-right li {
+  cursor: pointer;
+  border: 1px solid red;
+  margin-right: 20px;
+}
+.nav-right li:hover {
+  color: brown;
+  display: flex;
+  align-items: center;
+}
+
+.nav-right li span {
+  margin-right: 10px;
+}
