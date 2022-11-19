@@ -1,0 +1,136 @@
+<!-- <app-navbar></app-navbar> -->
+<div class="start">
+    <button class="btn1" (click)="displaySchedule()">
+        structure of meeting
+    </button>
+
+    <div>
+        <p-dialog header="Structure of meeting" [(visible)]="schedule" [breakpoints]="{'960px': '75vw'}"
+            [style]="{width: '70vw'}">
+            <div class="h-[65vh]">
+                <p-toolbar>
+                    <div class="p-toolbar-group-left">
+                        <div class="flex items-center ">
+                            <i class="pi pi-prime"></i>
+                            <h1 class="text-lg font-bold">Structure of meetings</h1>
+                        </div>
+                    </div>
+                    <div class="p-toolbar-group-right">
+                        <p-button label="Save" icon="pi pi-check" class="mr-2" styleClass="p-button-warning"></p-button>
+                        <p-button label="Print Preview" icon="pi pi-print" class="mr-2"></p-button>
+                        <p-button label="Delete" icon="pi pi-trash" styleClass="p-button-danger" class="mr-2">
+                        </p-button>
+                        <p-button label="close" icon="pi pi-times"></p-button>
+                    </div>
+                </p-toolbar>
+
+                <div>
+
+                    <div class="ff">
+                        <p class="font-semibold">Structure ID</p>
+                        <span class="flex items-center mb-1">
+                            <input type="text" pInputText>
+                            <button class="border border-solid border-black h-8 w-8">
+                                <i class="pi pi-search"></i>
+                            </button>
+                        </span>
+                    </div>
+
+                    <div class="ff">
+                        <td class="font-semibold">Sub title</td>
+                        <textarea class="border border-solid border-black"></textarea>
+                    </div>
+
+                </div>
+                <!-- <div class="flex flex-col justify-between border border-solid border-black">
+                    <div class="flex justify-between bg-slate-300 h-10">
+                        <div class="flex items-center ">
+                            <i class="pi pi-prime"></i>
+                            <h1 class="text-lg font-bold">Structure of meetings</h1>
+                        </div>
+
+                        <div class="flex items-center justify-evenly w-[45%]">
+                            <span class="flex items-center">
+                                <i class="pi pi-save"></i>
+                                <p>Save</p>
+                            </span>
+                            <span class="flex items-center">
+                                <i class="pi pi-search"></i>
+                                <p>Save</p>
+                            </span>
+                            <span class="flex items-center">
+                                <i class="pi pi-trash"></i>
+                                <p>Delete</p>
+                            </span>
+                            <span class="flex items-center">
+                                <i class="pi pi-times"></i>
+                                <p>Close</p>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="pl-7 py-3 border border-solid border-black">
+                        <div>
+                            
+
+                            
+                        </div>
+                    </div>
+
+                </div> -->
+
+                <!-- bottom -->
+                <!-- <div class="flex flex-col h-[70%]">
+                    <div class="flex justify-between border border-solid border-black bg-slate-300 h-10">
+                        <h1 class="text-lg font-bold">Structure</h1>
+
+                        <div class="flex items-center justify-evenly w-[45%]">
+                            <span class="flex items-center">
+                                <i class="pi pi-check"></i>
+                                <p>New Line</p>
+                            </span>
+                            <span class="flex items-center">
+                                <i class="pi pi-trash"></i>
+                                <p>Delete Line</p>
+                            </span>
+                            <span class="flex items-center">
+                                <i class="pi pi-exclamation-circle"></i>
+                                <p>Clear All</p>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="flex w-full h-[100%]">
+                        <div class="bg-amber-500 w-[85%]">
+                            <div class="tsk">
+                                <span class="hh">
+                                    <h1 class="w-[8%] border-r border-solid border-black">Sno</h1>
+                                    <h1 class="pl-1">Subtitle</h1>
+                                </span>
+
+                                <span class="tt">
+                                    <p class="w-[8%] border-r border-solid border-red-600">sds</p>
+                                    <input type="text" class="pl-1 w-[92%]">
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="bg-amber-700 w-[15%] flex flex-col items-center">
+                            <button class="mt-5 flex flex-col w-1/2 bg-slate-500">
+                                <i class="pi pi-prime"></i>
+                                <p>Up</p>
+                            </button>
+                            <button class="mt-3 flex flex-col w-1/2 bg-slate-500">
+                                <i class="pi pi-prime"></i>
+                                <p>down</p>
+                            </button>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </p-dialog>
+    </div>
+
+
+</div>

@@ -4,6 +4,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { emailsAva } from '../mork-data/email-validator';
 
 @Component({
   selector: 'app-crew-login',
@@ -13,19 +14,14 @@ import { Router } from '@angular/router';
   imports: [CommonModule, InputTextModule, ButtonModule, ReactiveFormsModule],
 })
 export class CrewLoginComponent implements OnInit {
+  errorStates: {
+    error: boolean;
+    message: string | null;
+  } = {
+    error: false,
+    message: null,
+  };
   login = this.fb.group({
-    name: [
-      '',
-      {
-        validators: [Validators.required],
-      },
-    ],
-    role: [
-      '',
-      {
-        validators: [Validators.required],
-      },
-    ],
     email: [
       '',
       {
@@ -54,14 +50,28 @@ export class CrewLoginComponent implements OnInit {
     return this.login.controls['email'];
   }
 
+  submitted: boolean = false;
   submit() {
+    // if email is in list return success
+    // else return error
     const logDetails = this.login.value;
-    console.log(logDetails);
-    this.router.navigate(['/', 'destination']);
+    if (typeof logDetails.email === 'string') {
+      const emailExist = emailsAva.includes(logDetails.email);
+      return emailExist
+        ? this.router.navigate(['/', 'destination'])
+        : (this.errorStates = {
+            error: true,
+            message: `this email, ${logDetails.email}, don't exist in our database`,
+          });
+    }
+
+    return this.router.navigate(['/', 'destination']);
+
+    this.submitted = true;
   }
 
   reset() {
-    this.login.reset;
+    this.login.reset();
     console.log(this.login.value);
   }
 }

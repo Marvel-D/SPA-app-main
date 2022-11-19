@@ -1,36 +1,40 @@
 <app-navbar></app-navbar>
 
 <div class="planet_page1">
-    <div class="translate-y-32">
+    <div class="pt-36">
 
-        <div class="flex">
-            <p>01</p>
+        <div class="flex text-2xl ml-10">
+            <p class="text-zinc-600 mr-4">01</p>
             <span>pick your destination</span>
         </div>
 
         <div class="planets">
-            <div *ngFor="let eachPlanet of explorationData.destinations" (click)="onSelectPlanet(eachPlanet)">
-                <button class="mr-5">{{eachPlanet.name}}</button>
+            <h1 class="invisible">help</h1>
+            <div class="flex">
+                <button *ngFor="let eachPlanet of explorationData.destinations" (click)="onSelectPlanet(eachPlanet)"
+                    class="planet-names">{{eachPlanet.name}}</button>
             </div>
         </div>
 
         <div class="clickedPlanet" *ngIf="selectedPlanet">
-            <div>
+            <div class="">
                 <img src="{{selectedPlanet.images.png}}" alt="{{selectedPlanet.name}}" height="40%" width="60%">
             </div>
 
             <div class="planetDetails">
-                <h1>{{selectedPlanet.name}}</h1>
-                <p>{{selectedPlanet. description}}</p>
+                <h1 class="text-7xl pb-4">{{selectedPlanet.name}}</h1>
+                <small>
+                    <p>{{selectedPlanet. description}}</p>
+                </small>
 
                 <br>
                 <hr>
-                <div class="flex">
-                    <div>
-                        <p>AVG. DISTANCE</p>
+                <div class="flex uppercase">
+                    <div class="w-1/2">
+                        <small>AVG. DISTANCE</small>
                         <h1>{{selectedPlanet.distance}}</h1>
                     </div>
-                    <div>
+                    <div class="w-1/2">
                         <p>EST. TRAVEL TIME</p>
                         <h1>{{selectedPlanet.travel}}</h1>
                     </div>

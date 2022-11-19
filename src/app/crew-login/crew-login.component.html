@@ -1,6 +1,6 @@
 <div class="login-page">
     <div class="login-page-card">
-        <form class="card-left" [formGroup]="login">
+        <div class="card-left">
             <div class="cl_top">
                 <p>Welcome Back</p>
                 <h1 class="font-bold text-3xl">Login to your account</h1>
@@ -10,42 +10,52 @@
                 </div>
             </div>
 
-            <div class="cl_bottom">
-                <!-- name/role -->
-                <div class="flex justify-between w-[100%]">
-                    <span class="p-input-icon-right mt-5">
-                        <i class="pi pi-prime"></i>
-                        <input formControlName="name" class="w-[23vw]" type="text" pInputText placeholder="Name">
-                    </span>
+            <form [formGroup]="login">
+                <div class="cl_bottom">
+                    <!-- email/password -->
+                    <div class="mt-5 w-[100%]">
+                        <div class="w-full">
+                            <p>Email</p>
+                            <span class="p-input w-full">
+                                <input formControlName="email" class="w-[100%]" type="text" pInputText
+                                    placeholder="Enter Your Email">
+                                <small class="block" *ngIf="email.errors?.['email']">This is not a valid
+                                    email.</small>
 
-                    <span class=" p-input-icon-right mt-5">
-                        <i class="pi pi-prime"></i>
-                        <input formControlName="role" class="w-[23vw]" type="text" pInputText placeholder="Role">
-                    </span>
+                                <small class="block text-red-700"
+                                    *ngIf="(email.invalid && submitted) || (email.invalid && email.dirty)">Please input
+                                    your
+                                    email</small>
+                                <small class="block" *ngIf="errorStates.error">
+                                    {{errorStates.message}}</small>
+
+                            </span>
+                        </div>
+
+                        <div class="mt-2">
+                            <p>Password</p>
+                            <span class="p-input w-full">
+                                <input formControlName="password" class="w-[100%]" type="password" pInputText
+                                    placeholder="password">
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- login/submit -->
+                    <div class="mt-5 w-full">
+                        <div class="mb-3">
+                            <button class="w-full" pButton label="Login" (click)="submit()"
+                                [disabled]="!login.valid"></button>
+                        </div>
+
+                        <div>
+                            <button class="w-full" pButton label="Reset" (click)="reset()"></button>
+                        </div>
+                    </div>
+
+
                 </div>
-
-                <!-- email/password -->
-                <div class="flex flex-col justify-between w-[100%]">
-                    <span class="p-input-icon-right mt-5">
-                        <i class="pi pi-prime"></i>
-                        <input formControlName="email" class="w-[100%]" type="text" pInputText placeholder="Email">
-                        <small class="p-error block" *ngIf="email.errors?.['email']">This is not a valid email.</small>
-                    </span>
-
-                    <span class="p-input-icon-right mt-5">
-                        <i class="pi pi-prime"></i>
-                        <input formControlName="password" class="w-[100%]" type="password" pInputText
-                            placeholder="password">
-                    </span>
-                </div>
-
-                <!-- login/submit -->
-                <div class="flex justify-around mt-5 w-full">
-                    <button pButton label="Reset" (click)="reset()"></button>
-                    <button pButton label="Login" (click)="submit()" [disabled]="!login.valid"></button>
-                </div>
-            </div>
-
-        </form>
+            </form>
+        </div>
     </div>
 </div>

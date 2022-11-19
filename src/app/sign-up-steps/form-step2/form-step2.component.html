@@ -1,0 +1,27 @@
+<div class="stepsdemo-content">
+    <p-card>
+        <div>
+            <h1 class="text-2xl font-bold">Personal Information</h1>
+            <h5>Enter your Personal information</h5>
+        </div>
+        <form [formGroup]="signUp2" class="">
+
+            <div class="p-input w-[50%]">
+                <input formControlName="firstName" class="w-[100%]" type="text" pInputText placeholder="First name">
+            </div>
+
+
+            <div class="p-input mt-3">
+                <input formControlName="email" class="w-[100%]" type="email" pInputText placeholder="Email">
+            </div>
+
+
+        </form>
+
+        <ng-template pTemplate="footer">
+            <div class="grid grid-nogutter justify-content-end">
+                <!-- <p-button label="Next" (onClick)="nextPage()" icon="pi pi-angle-right" iconPos="right"></p-button> -->
+            </div>
+        </ng-template>
+    </p-card>
+</div>

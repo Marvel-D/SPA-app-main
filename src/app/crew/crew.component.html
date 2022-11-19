@@ -1,4 +1,31 @@
-<div class="container">
-    <h1> This is the crew Component </h1>
-    <h3> This is the content of crew </h3>
+<app-navbar></app-navbar>
+
+<div class="crew_page">
+    <div class="crew">
+        <div class="flex text-2xl ml-10">
+            <span class="text-zinc-600 mr-4">02</span>
+            <h2>Meet your crew</h2>
+        </div>
+
+        <div class="flex w-fit translate-x-12 translate-y-96">
+            <p class="crew-selector" *ngFor="let crewM of explorationData.crew" (click)="onSelectMember(crewM)">
+                {{crewM.name}}</p>
+        </div>
+    </div>
+
+    <div class="ini" *ngIf="selectedMember">
+        <div class="crew-details">
+            <div class="text-3xl text-zinc-600">{{selectedMember.role}}</div>
+            <div class="text-5xl">{{selectedMember.name}}</div>
+
+            <div class="mt-5 w-[60%]">
+                <small>{{selectedMember.bio}}</small>
+            </div>
+        </div>
+        <div class="crew-img">
+            <img src="{{selectedMember.images.png}}" alt="" height="100%" width="40%">
+        </div>
+    </div>
+
+
 </div>

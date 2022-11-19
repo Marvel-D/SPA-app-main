@@ -4,16 +4,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CrewComponent } from './crew/crew.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { SignUpStepsModule } from './sign-up-steps/sign-up-steps.module';
 @NgModule({
-  declarations: [AppComponent, CrewComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    SignUpStepsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -21,5 +21,9 @@ export class NavbarComponent implements OnInit {
   goToCrew() {
     this.router.navigate(['/', 'crew']);
   }
+
+  goToTechnology() {
+    this.router.navigate(['/', 'technology']);
+  }
   ngOnInit(): void {}
 }

@@ -8,29 +8,29 @@
   color: white;
 }
 
-.blu {
-  background-color: blue;
-}
-
 .planets {
-  border: 2px solid red;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  padding: 0 30%;
 }
 
-.planets li {
-  list-style: none;
+.planet-names {
+  text-align: center;
+  margin-right: 20px;
+}
+
+.planet-names:hover {
+  border-bottom: 2px solid white;
 }
 
 .clickedPlanet {
-  /* padding: 0 10%; */
-  border: 2px solid darkorange;
+  margin-top: 20px;
+  padding: 0 10%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .planetDetails {
-  border: 1px solid royalblue;
   display: flex;
   width: 50%;
   flex-direction: column;

@@ -1,0 +1,50 @@
+.crew_page {
+  height: 100%;
+  width: 100%;
+  background-image: url("/assets/images/destination/background-destination-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.crew {
+  margin-top: 10%;
+}
+.crew-selector {
+  z-index: 999;
+  color: transparent;
+  font-size: 1%;
+  background-color: darkgrey;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+}
+
+.ini {
+  display: flex;
+  height: 60%;
+  width: 100%;
+  justify-content: space-around;
+}
+.crew-details {
+  width: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+.crew-img {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: fit-content;
+}
+
+.crew-img img {
+  height: 70vh;
+  width: 60vh;
+}
